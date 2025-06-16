@@ -1,12 +1,19 @@
 import Header from "./Header";
 import { useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { validateData } from "../utils/validate";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import {auth} from "../utils/firebase.js"
+import {auth} from "../utils/firebase.js";
+
+
+
 
 const Login = () => {
 
+  const navigate = useNavigate();
+
+
+  
  const [errorMessage, setErrorMessage] = useState(null);
  const email = useRef(null);
  const password = useRef(null);
@@ -26,15 +33,16 @@ const Login = () => {
     ).then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+    
     console.log(user);
+    navigate("/browse");
     // ...
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorCode, errorMessage);
-    
-    // ..
+   
   });
 
 

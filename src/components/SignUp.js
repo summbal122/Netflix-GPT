@@ -1,15 +1,22 @@
 import Header from "./Header";
 import { validateData } from "../utils/validate";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase.js";
 import { useRef, useState } from "react";
 
+import { useNavigate } from "react-router";
+
+
 
 const SignUp = () => {
+    const navigate = useNavigate();
+
+  
+  
 const [errorMessage, setErrorMessage] = useState(null);
  const email = useRef(null);
  const password = useRef(null);
-
+ 
 
   const handleButtonClick = (e) => {
     e.preventDefault();
@@ -26,6 +33,17 @@ const [errorMessage, setErrorMessage] = useState(null);
     ).then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+      updateProfile(user,
+         {
+        displayName: email.current.value ,
+       photoURL: "https://avatars.githubusercontent.com/u/146133333?v=4&size=64"
+        }).then(() => {
+         navigate("/browse");
+        }).catch((error) => {
+        // An error occurred
+        // ...
+        });
+
     console.log(user);
     // ...
   })
