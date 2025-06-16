@@ -1,9 +1,9 @@
 import Header from "./Header";
 import { useRef, useState } from "react";
 import { Link } from "react-router";
-
 import { validateData } from "../utils/validate";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../utils/firebase.js"
 
 const Login = () => {
 
@@ -11,14 +11,33 @@ const Login = () => {
  const email = useRef(null);
  const password = useRef(null);
 
+
   const handleButtonClick = () => {
     validateData(email.current.value,password.current.value);
-    console.log(email);
-    console.log(password);
-
     const message = validateData(email.current.value, password.current.value);
-    console.log(message);
     setErrorMessage(message);
+
+    if (message) return;
+    
+    signInWithEmailAndPassword(
+      auth, 
+      email.current.value, 
+      password.current.value
+    ).then((userCredential) => {
+    // Signed up 
+    const user = userCredential.user;
+    console.log(user);
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    setErrorMessage(errorCode, errorMessage);
+    
+    // ..
+  });
+
+
   }
   const [isSignInForm, setIsSignInForm] = useState(true);
   const toggleSignInForm = () => {
