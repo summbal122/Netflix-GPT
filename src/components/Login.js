@@ -1,6 +1,6 @@
-import Header from "./Header";
+
 import { useRef, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import { validateData } from "../utils/validate";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../utils/firebase.js";
@@ -9,14 +9,9 @@ import {auth} from "../utils/firebase.js";
 
 
 const Login = () => {
-
-  const navigate = useNavigate();
-
-
-  
- const [errorMessage, setErrorMessage] = useState(null);
- const email = useRef(null);
- const password = useRef(null);
+    const [errorMessage, setErrorMessage] = useState(null);
+    const email = useRef(null);
+    const password = useRef(null);
 
 
   const handleButtonClick = () => {
@@ -32,10 +27,8 @@ const Login = () => {
       password.current.value
     ).then((userCredential) => {
     // Signed up 
-    const user = userCredential.user;
-    
-    console.log(user);
-    navigate("/browse");
+    ;
+   
     // ...
   })
   .catch((error) => {
@@ -57,8 +50,6 @@ const Login = () => {
     <div className="relative  min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/PK-en-20250609-TRIFECTA-perspective_fe615052-4a49-4618-b131-4499f9cf0058_small.jpg')]">
       <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
       <div className="relative z-10">
-        <Header showButton={false} />
-
         <div className="flex justify-center  items-center h-screen">
           <div className="bg-black/70 flex flex-col w-md py-14 px-12 gap-6 rounded-md">
             
@@ -130,7 +121,7 @@ const Login = () => {
   
 
     <div className="bg-footer-black">
-   <h1>jo </h1>
+   <h1>jo</h1>
     </div>
     </div>
   );
