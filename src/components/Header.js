@@ -10,8 +10,6 @@ import { addUser , removeUser } from "../utils/userSlice";
 const Header = () => {
     const auth = getAuth();
     const user = useSelector((store) => store.user);
-    // const location = useLocation(); // to know which page we're on
- 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -51,12 +49,27 @@ const Header = () => {
 
   return (
     <div className=" absolute w-full z-10 px-32 py-1 flex items-center justify-between">
+      <div className="flex items-center gap-4 text-sm">
       <img className="w-48" src={IMG} alt="logo" />
+       {user && (
+        <>
+         <ul className="flex gap-4">
+            <li>Home</li>
+            <li>TV Shows</li>
+            <li>Movies</li>
+            <li>Recently Added</li>
+            <li>My List</li>
+           </ul>
+        </>
+       )}
+      </div>
+   
       <div className="flex items-center gap-4">
         {user && (
           // ✅ Show this if user is signed in
           <>
-            <h2 className="text-white font-medium">{user.email}</h2>
+          
+            <h2 className="text-black font-medium">{user.email}</h2>
             <button
               onClick={handleSignOut}
               className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"
@@ -65,17 +78,7 @@ const Header = () => {
             </button>
           </>
         ) 
-        // : (
-        //   // ✅ Show Sign In only on SignUp page, not on Login
-        //   location.pathname === "/signup" && (
-        //     <button
-        //       onClick={handleSignIn}
-        //       className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"
-        //     >
-        //       Sign In
-        //     </button>
-        //   )
-        // )}
+   
       }
       </div>
     </div>

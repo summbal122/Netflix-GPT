@@ -47,11 +47,11 @@ const Login = () => {
 
   return (
     <div> 
-    <div className="relative  min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/PK-en-20250609-TRIFECTA-perspective_fe615052-4a49-4618-b131-4499f9cf0058_small.jpg')]">
-      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+    <div className="relative  bg-cover bg-center bg-no-repeat bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/PK-en-20250609-TRIFECTA-perspective_fe615052-4a49-4618-b131-4499f9cf0058_small.jpg')]">
+      <div className="absolute  inset-0 bg-black opacity-60 z-0"></div>
       <div className="relative z-10">
-        <div className="flex justify-center  items-center h-screen">
-          <div className="bg-black/70 flex flex-col w-md py-14 px-12 gap-6 rounded-md">
+        <div className="flex justify-center items-center ">
+          <div className="bg-black/70 mt-36 mb-14 flex flex-col w-md py-14 px-12 gap-6 rounded-md">
             
             <h1 className="text-white text-2xl font-bold" onClick={handleButtonClick}>Sign In</h1>
             
