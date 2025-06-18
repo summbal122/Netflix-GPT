@@ -1,15 +1,16 @@
 import IMG from "../images/Netflix_Logo.png";
 import { getAuth, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router";
+import {  useNavigate } from "react-router";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser , removeUser } from "../utils/userSlice";
 
+
 const Header = () => {
     const auth = getAuth();
     const user = useSelector((store) => store.user);
-    const location = useLocation(); // to know which page we're on
+    // const location = useLocation(); // to know which page we're on
  
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -24,14 +25,15 @@ const Header = () => {
             displayName:displayName, 
             photoURL:photoURL }
         ));
-        navigate("/browse"); // user is logged in → go to /browse
+        navigate("/browse"); // user is logged in  go to /browse
       } else {
         dispatch(removeUser());
-        navigate("/"); // user is not logged in → go to /login
+        navigate("/"); // user is not logged in go to /login
       }
     });
+    //  unsubscribe when component unmounts
+    return () => unsubscribe(); 
 
-    return () => unsubscribe(); // cleanup on unmount
   },[auth, dispatch, navigate] );
 
   const handleSignOut = () => {
@@ -45,16 +47,13 @@ const Header = () => {
       });
   };
 
-  const handleSignIn = () => {
-    navigate("/login");
-  };
+ 
 
   return (
-    <div className="px-32 py-1 flex items-center justify-between">
+    <div className=" absolute w-full z-10 px-32 py-1 flex items-center justify-between">
       <img className="w-48" src={IMG} alt="logo" />
-
       <div className="flex items-center gap-4">
-        {user ? (
+        {user && (
           // ✅ Show this if user is signed in
           <>
             <h2 className="text-white font-medium">{user.email}</h2>
@@ -65,17 +64,19 @@ const Header = () => {
               Sign Out
             </button>
           </>
-        ) : (
-          // ✅ Show Sign In only on SignUp page, not on Login
-          location.pathname === "/signup" && (
-            <button
-              onClick={handleSignIn}
-              className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"
-            >
-              Sign In
-            </button>
-          )
-        )}
+        ) 
+        // : (
+        //   // ✅ Show Sign In only on SignUp page, not on Login
+        //   location.pathname === "/signup" && (
+        //     <button
+        //       onClick={handleSignIn}
+        //       className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"
+        //     >
+        //       Sign In
+        //     </button>
+        //   )
+        // )}
+      }
       </div>
     </div>
   );

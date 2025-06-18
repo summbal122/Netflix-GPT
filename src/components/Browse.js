@@ -1,12 +1,13 @@
+import useGetPlayingMovies from "../hooks/useGetPlayingMovies";
 
 const Browse = () => {
+  useGetPlayingMovies();
 
   return (
     <div className="px-32 py-1 flex items-center justify-between">
 
-     
     </div>
   );
-};
+}
 
 export default Browse;

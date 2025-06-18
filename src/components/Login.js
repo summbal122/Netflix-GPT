@@ -9,9 +9,9 @@ import {auth} from "../utils/firebase.js";
 
 
 const Login = () => {
-    const [errorMessage, setErrorMessage] = useState(null);
-    const email = useRef(null);
-    const password = useRef(null);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const email = useRef(null);
+  const password = useRef(null);
 
 
   const handleButtonClick = () => {
@@ -27,7 +27,7 @@ const Login = () => {
       password.current.value
     ).then((userCredential) => {
     // Signed up 
-    ;
+  
    
     // ...
   })

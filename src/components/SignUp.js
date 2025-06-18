@@ -2,12 +2,11 @@ import { validateData } from "../utils/validate";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase.js";
 import { useRef, useState } from "react";
-
-
-
+import { useNavigate } from "react-router";
 
 
 const SignUp = () => {
+  const navigate = useNavigate();
     
     const [errorMessage, setErrorMessage] = useState(null);
     const email = useRef(null);
@@ -48,6 +47,9 @@ const SignUp = () => {
   });
 
   }
+   const handleSignIn = () => {
+    navigate("/");
+  };
 
   return (
     <div className="relative min-h-screen bg-cover bg-center bg-no-repeat bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/PK-en-20250609-TRIFECTA-perspective_fe615052-4a49-4618-b131-4499f9cf0058_small.jpg')]">
@@ -82,6 +84,16 @@ const SignUp = () => {
                className="bg-button-red text-2xl text-white w-1/3  font-semibold p-3 cursor-pointer rounded-sm hover:opacity-95 ">Get Started <i className="fa-solid fa-chevron-right"></i> </button>
               
             </form>
+            <div className="flex items-center gap-4">
+              <p className="text-white">Don't have an account?</p>
+               <button
+              onClick={handleSignIn}
+              className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"
+            >
+              Sign In
+            </button>
+            </div>
+           
 
           </div>
           <p className="text-red-500">
