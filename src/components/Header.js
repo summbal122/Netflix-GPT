@@ -69,7 +69,7 @@ const Header = () => {
           // ✅ Show this if user is signed in
           <>
           
-            <h2 className="text-black font-medium text-white">{user.email}</h2>
+            <h2 className="font-medium text-white">{user.email}</h2>
             <button
               onClick={handleSignOut}
               className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"

@@ -7,4 +7,4 @@ export const API_OPTIONS = {
     Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9...", // Your actual token
   },
 };
-
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"

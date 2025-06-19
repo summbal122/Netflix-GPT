@@ -6,7 +6,7 @@ const trailerVideo = useSelector((store) => store.movies.trailerVideo)
  useMovieTrailer(id);
 
   return (
-   <div className="w-full h-screen aspect-video"> 
+   <div className=" aspect-video"> 
       
       <iframe
       className="w-screen  h-screen"
