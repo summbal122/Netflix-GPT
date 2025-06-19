@@ -1,14 +1,17 @@
 
 const VideoTitle = ({title, overview}) => {
   return (
-    <div className='w-md border-7 space-y-2 p-5'>
-      <h1 className='text-3xl font-bold '>{title}</h1>
-      <p className='text-xs'>{overview}</p>
+    <div className='w-screen aspect-video absolute text-white bg-gradient-to-r from-black'>
+      <div className=" absolute left-0 top-1/2 transform -translate-y-1/2 w-md space-y-4 ml-20">
+       <h1 className='text-5xl font-bold mb-8 '>{title}</h1>
+      <p className='text-sm'>{overview}</p>
 
       <div className='space-x-4 flex'> 
-       <button className='text-white font-bold px-4 py-2 bg-gray-400 rounded-md text-xs flex items-center gap-2'><i className="fa-solid fa-play "></i>Play</button>
-      <button className='text-white font-bold px-4 py-2 bg-gray-400 rounded-md text-xs'>+ My List</button>
+       <button className='text-white font-bold px-5 py-3 bg-gray-600 rounded-md text-xs flex items-center gap-2'><i className="fa-solid fa-play "></i>Play</button>
+      <button className='text-white font-bold px-5 py-3 bg-gray-600 rounded-md text-xs'>+ My List</button>
       </div>
+       </div>
+     
       
     </div>
     

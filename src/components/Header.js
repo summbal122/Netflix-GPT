@@ -53,7 +53,7 @@ const Header = () => {
       <img className="w-48" src={IMG} alt="logo" />
        {user && (
         <>
-         <ul className="flex gap-4">
+         <ul className="flex gap-4 text-white">
             <li>Home</li>
             <li>TV Shows</li>
             <li>Movies</li>
@@ -69,7 +69,7 @@ const Header = () => {
           // ✅ Show this if user is signed in
           <>
           
-            <h2 className="text-black font-medium">{user.email}</h2>
+            <h2 className="text-black font-medium text-white">{user.email}</h2>
             <button
               onClick={handleSignOut}
               className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"

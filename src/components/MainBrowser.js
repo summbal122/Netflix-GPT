@@ -14,7 +14,7 @@ const MainBrowser = () => {
     } = mainMovie;
 
   return (
-    <div className="mt-40">
+    <div className="">
       <VideoTitle title={original_title} overview={overview}  />
       <VideoBackground id={id}/>
       
