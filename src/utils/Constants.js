@@ -8,3 +8,5 @@ export const API_OPTIONS = {
   },
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500"
+
+export const SECTION_IMG_URL = "https://occ-0-1241-58.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/"
