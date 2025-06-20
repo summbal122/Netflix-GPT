@@ -18,10 +18,12 @@ const SectionSignUp = () => {
   return (
     <div className="bg-black ">
       <div className="bg-black w-full border-t-4  border-pink-800 rounded-t-[70px] flex flex-col items-center bg-gradient-to-b from-blue-700/15 to-black">
-       <div className="flex flex-col w-3/4 gap-20 py-30 ">
-       <div className="space-y-3">
+       <div className="flex flex-col w-9/12 gap-20 py-30 ">
+       <div className="space-y-4">
         <h1 className="text-white text-2xl font-bold">Trending Now</h1>
-       <div className="overflow-x-auto gap-5 ">
+        <div className="flex items-center gap-4">
+          <i class="fa-solid fa-chevron-left text-xl text-white/70 bg-[#2d2d2d] py-12 px-1 border border-none rounded-md"></i>
+                 <div className="overflow-x-auto gap-5 ">
        
         <div className="flex gap-12">
         {topMovies.map((img, index) => (
@@ -42,6 +44,10 @@ const SectionSignUp = () => {
         ))}
       </div>
        </div>
+
+       <i className="fa-solid fa-chevron-right text-xl text-white/70 bg-[#2d2d2d] py-12 px-1 border border-none rounded-md"></i>
+        </div>
+
        </div>
 
        <SectionSignUpAbout/>
