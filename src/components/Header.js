@@ -48,7 +48,7 @@ const Header = () => {
  
 
   return (
-    <div className=" absolute w-full z-10 px-32 py-1 flex items-center justify-between">
+    <div className=" absolute w-full z-10 p-10 md:px-32 py-1 flex items-center justify-between">
       <div className="flex items-center gap-4 text-sm">
       <img className="w-28 lg:w-48 2xl:w-72" src={IMG} alt="logo" />
        {user && (
