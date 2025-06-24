@@ -3,16 +3,23 @@ import MainBrowser from "./MainBrowser";
 import MoviesSection from "./MoviesSection";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useUpComingMovies from "../hooks/useUpComingMovies";
-
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 const Browse = () => {
+  const showGptSearch = useSelector((store => store.gpt.showGptSearch))
   useGetPlayingMovies();
   usePopularMovies();
   useUpComingMovies();
 
   return (
     <div className="">
-    <MainBrowser/>
+      {
+      showGptSearch ? <GptSearch /> : <> <MainBrowser/>
     <MoviesSection/>
+    </>  }
+   
+
+
     </div>
   );
 }

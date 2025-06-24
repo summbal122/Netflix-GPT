@@ -5,13 +5,15 @@ import {  useNavigate } from "react-router";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser , removeUser } from "../utils/userSlice";
-
+import { toggleGptSearchView } from "../utils/GptSlice";
 
 const Header = () => {
     const auth = getAuth();
     const user = useSelector((store) => store.user);
+    const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+  
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -44,9 +46,10 @@ const Header = () => {
         console.error("Sign out error:", error);
       });
   };
+  const handleGptSearchClick = () =>{
+   dispatch(toggleGptSearchView());
 
- 
-
+  }
   return (
     <div className=" absolute w-full z-10 p-10 md:px-32 py-1 flex items-center justify-between">
       <div className="flex items-center gap-4 text-sm">
@@ -68,8 +71,10 @@ const Header = () => {
         {user && (
           // ✅ Show this if user is signed in
           <>
-          
-            <h2 className="font-medium text-white">{user.email}</h2>
+          <button
+          onClick={handleGptSearchClick}
+           className=" text-gray-600">{showGptSearch? "Homepage" : "GPT Search"}</button>
+            <h2 className="font-medium text-gray-600">{user.email}</h2>
             <button
               onClick={handleSignOut}
               className="text-white bg-button-red py-1.5 px-4 text-sm font-semibold rounded-sm"
@@ -80,6 +85,7 @@ const Header = () => {
         ) 
    
       }
+
       </div>
     </div>
   );
