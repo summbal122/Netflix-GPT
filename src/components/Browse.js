@@ -17,9 +17,8 @@ const Browse = () => {
 
   return (
     <div className="">
-      {
-      showGptSearch ? <GptSearch /> : <> <MainBrowser/>
-    <MoviesSection/>
+      {showGptSearch ? <GptSearch /> : <> <MainBrowser/>
+      <MoviesSection/>
     </>  }
    
 

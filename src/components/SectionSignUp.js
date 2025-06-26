@@ -14,7 +14,6 @@ const SectionSignUp = () => {
     "AAAABUk_n3x3jpcR829IYPtiuC8PbrcYSJqBAPtuo0KvFV0Olp7A65H-QzhvaU8HR5D-b9MExs3uQrEYHJ45f0zXK3Ok3QhPXJm_bXnU-d-aWa_oFbxsrL0Wqi62NORZPy99pV8f.webp?r=3da",
     "AAAABYGL4_ns5MGTE5-Yd3ZQVB5apyY9yxQ39lxjT_27ehdoGzrxRwNc4osgXEeifcv9yO_MgMySL-p6hMxtQZnIEkZmyglIJ7wm7ik.webp?r=c23",
   ];
-
   return (
     <div className="bg-black ">
       <div className="bg-black w-full border-t-4  border-pink-800 rounded-t-[70px] flex flex-col items-center bg-gradient-to-b from-blue-700/15 to-black">
@@ -27,27 +26,23 @@ const SectionSignUp = () => {
        
         <div className="flex gap-12">
         {topMovies.map((img, index) => (
-          
-          <div key={index} className="flex items-end min-w-[180px]   ">
+          <div key={index} className="flex items-end min-w-[180px]">
             <span
               className="text-[80px] font-extrabold text-black -mb-[-12px] mr-[-24px] z-10"
-              style={{ WebkitTextStroke: "1px white", lineHeight:1 }}
-            >
+              style={{ WebkitTextStroke: "1px white", lineHeight:1 }}>
               {index + 1}
-            </span>
-            <img
+           </span>
+          <img
               className="rounded-lg w-[200px] h-auto"
               alt={`Top movie ${index + 1}`}
               src={`${SECTION_IMG_URL}${img}`}
             />
-          </div>  
+         </div>  
         ))}
       </div>
        </div>
-
        <i className="fa-solid fa-chevron-right text-xl text-white/70 bg-[#2d2d2d] py-12 px-1 border border-none rounded-md"></i>
         </div>
-
        </div>
 
        <SectionSignUpAbout/>

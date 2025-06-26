@@ -5,16 +5,18 @@ const GptMovieSuggestions = () => {
   if(!movieNames) return null;
 
   return (
-    <div className="p-4 m-4 text-orange-500 bg-black">
+    <div className="p-4 m-4 text-orange-500 bg-[#141414]">
       {movieNames.map((movieName, index) => (
   <MovieList
     key={movieName}
     title={movieName}
     movies={movieResults[index]}
   />
-))}
-
-    </div>
+  
+  
+))
+}
+ </div>
   )
 }
 
