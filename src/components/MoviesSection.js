@@ -7,6 +7,7 @@ const MoviesSection = () => {
     <div
     id="movies-section"
      className="text-white flex flex-col gap-8 bg-black px-6 py-8">
+      
       <div className="mt-[-190px]  relative z-20 text-white "> 
          <MovieList title={"Now playing"} movies= {movies.nowPlayingMovies} />
       </div>

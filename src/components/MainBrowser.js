@@ -17,7 +17,7 @@ const MainBrowser = () => {
   } = mainMovie;
 
   return (
-    <div className="">
+    <div className="bg-black">
       <VideoTitle
         title={original_title}
         overview={overview}

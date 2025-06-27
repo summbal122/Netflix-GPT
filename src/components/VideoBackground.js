@@ -6,7 +6,7 @@ const VideoBackground = ({ id, showTrailer }) => {
   useMovieTrailer(id);
 
   return (
-    <div className="aspect-video w-screen bg-black">
+    <div className="aspect-video w-screen bg-[#141414]">
       {showTrailer && trailerVideo?.key ? (
         <iframe
           className="w-screen h-screen"

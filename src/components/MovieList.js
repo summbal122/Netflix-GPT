@@ -8,11 +8,10 @@ const MovieList = ({ title, movies }) => {
     setSelectedId((prevId) => (prevId === id ? null : id)); // toggle
   };
   return (
-    <div className='px-6 pb-8 '>
-
+    <div className='px-10 pb-8'>
       <h1 className='text-xl text-white font-bold mb-4'>{title}</h1>
-      <div className='overflow-x-auto'>
-        <div className='flex gap-4 w-max'>
+      <div className=' overflow-x-auto scrollbar-hidden'>
+        <div className='flex gap-2 w-max'>
           {movies.map((movie) => (
             <MovieCard key={movie.id} posterPath={movie.poster_path} vote={movie.vote_average} releaseDate={movie.release_date} overview = {movie.overview} 
             isSelected={selectedId === movie.id}
