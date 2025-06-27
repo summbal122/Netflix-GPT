@@ -18,7 +18,7 @@ const VideoBackground = ({ id, showTrailer }) => {
         ></iframe>
       ) : (
         <img
-          className="w-screen object-cover h-full"
+          className="w-screen h-full"
           alt="bg"
           src="https://4kwallpapers.com/images/walls/thumbs_3t/22358.jpg"
         />

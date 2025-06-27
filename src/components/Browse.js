@@ -29,7 +29,7 @@ const Browse = () => {
   useTrending();
 
   return (
-    <div>
+    <div className="bg-[#141414]">
       {showGptSearch ? <GptSearch /> : <> <MainBrowser/>
       <MoviesSection/>
       <TvShowsSection/>

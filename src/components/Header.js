@@ -85,12 +85,13 @@ useEffect(() => {
 
   }
   return (
-    <div className=" w-full z-60 px-10 md:px-32 pt-2 flex items-center justify-between bg-black/60  fixed ">
+    <div className="flex justify-center w-full  bg-black/60 fixed z-50 "> 
+    <div className="w-11/12 lg:w-10/12 pb-1  pt-2 flex items-center justify-between">
       <div className="flex items-center gap-4 text-sm">
-      <img className="w-28 lg:w-48 2xl:w-72" src={IMG} alt="logo" />
+      <img className="w-12 md:w-28 lg:w-48 2xl:w-72" src={IMG} alt="logo" />
        {user && (
         <>
-         <ul className="flex gap-4 text-white hover:cursor-pointer">
+         <ul className="flex gap-1 md:gap-3 lg:gap-4 text-[8px] md:text-xs lg:text-sm 2xl:text-2xl text-white hover:cursor-pointer">
             <li
               className="hover:font-bold"
               onClick={() => { if (showGptSearch) { dispatch(toggleGptSearchView());
@@ -117,7 +118,7 @@ useEffect(() => {
 
              {showGenre && ( 
            <div className="absolute border border-[#141414] w-36 top-9 left-[-28px] bg-black/90 text-white/60 font-semibold rounded-sm text-sm space-y-1 p-3 z-50"> {(genres.map((genre) => {
-             return <h1 className="hover:opacity-60"  key={genre.id}>{genre.name}</h1>;
+             return <h1 className="text-[8px] md:text-xs lg:text-sm hover:opacity-60"  key={genre.id}>{genre.name}</h1>;
             })) }
              </div>)}
             </div>
@@ -128,30 +129,30 @@ useEffect(() => {
        )}
       </div>
    
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-1 md:gap-4">
         {user && (
           <>
           {location.pathname === "/browse" && !showGptSearch && (
             <button
           onClick={handleGptSearchClick}
-         className=" text-black bg-white py-1.5 px-10 text-sm font-semibold rounded-sm hover:cursor-pointer hover:opacity-60 ">
+         className=" text-black bg-white py-1 2xl:py-3 2xl:px-14 md:py-1.5 px-2 md:px-10 font-semibold rounded-sm hover:cursor-pointer hover:opacity-60 text-[7px] md:text-xs lg:text-sm  2xl:text-2xl ">
              GPT Search</button>
           ) }
-           <div className="flex items-center gap-2.5">
-            <img className="w-8 rounded-xs hover:cursor-pointer"
+           <div className="flex items-center gap-1 md:gap-2.5 2xl:gap-4">
+            <img className="w-4 md:w-6 lg:w-8 2xl:w-14 rounded-xs hover:cursor-pointer"
              alt="profile" src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp" />
             <div ref={dropdownRef} className="relative">
               <i
                 onClick={handleShowChevron}
-                className={`fa-solid ${showChevron ? "fa-chevron-up" : "fa-chevron-down"} text-white text-xs hover:cursor-pointer`}
+                className={`fa-solid ${showChevron ? "fa-chevron-up" : "fa-chevron-down"} text-white text-[9px] md:text-[12px] lg:text-xs  2xl:text-2xl hover:cursor-pointer`}
               ></i>
               {showChevron && ( 
                 <div
-                  className="absolute border border-[#141414] w-22 top-10 left-[-28px] bg-black/90 text-white/60 font-semibold rounded-sm text-sm space-y-1 p-3 z-50"
+                  className="absolute border border-[#141414] w-22 2xl:w-36 top-10 2xl:top-18 xs:left-[-80px] sm:left-[-58px] md:left-[-38px] lg:left-[-28px] bg-black/90 text-white/60 font-semibold rounded-sm text-xs lg:text-sm space-y-1 2xl:space-y-3 p-3 z-50"
                 >
-                  <h1 className="hover:cursor-pointer hover:opacity-60">Manage</h1>
+                  <h1 className="hover:cursor-pointer hover:opacity-60  2xl:text-3xl">Manage</h1>
                   <h2
-                    className="text-button-red font-semibold hover:cursor-pointer"
+                    className="text-button-red font-semibold hover:cursor-pointer  2xl:text-3xl"
                     onClick={() => {
                       handleSignOut();
                       setShowChevron(false);
@@ -168,6 +169,7 @@ useEffect(() => {
       }
 
       </div>
+    </div>
     </div>
   );
 };

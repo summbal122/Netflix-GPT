@@ -1,21 +1,17 @@
 import { useRef, useState } from "react";
 import openai from "../utils/openai";
-import { API_OPTIONS } from "../utils/Constants";
+import useTmdbSearch from "../hooks/useSearcMovieTmdb";
 import { useDispatch } from "react-redux";
 import { addGPTMoviesResult } from "../utils/GptSlice";
+import { clearGptSearchMovies } from "../utils/GptSlice";
 const GptSearchBar = () => {
-  const [errorMessage, setErrorMessage] = useState("");
+  const searchMovieTmbd = useTmdbSearch();
   const dispatch = useDispatch();
+  const [errorMessage, setErrorMessage] = useState("");
   const searchText = useRef();
-
-  const searchMovieTmbd = async (movie) => {
-    const data = await fetch(
-      "https://api.themoviedb.org/3/search/movie?query=" + movie + "&include_adult=false&language=en-US&page=1",
-      API_OPTIONS
-    );
-    const json = await data.json();
-    return json.results;
-  };
+   const handleClearMovies = () => {
+    dispatch(clearGptSearchMovies());
+   }
 
   const handleGptSearchClick = async () => {
     const query = searchText.current.value.trim();
@@ -60,8 +56,8 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl flex flex-col items-center text-white">
-      <h1 className="text-4xl font-extrabold mb-6 text-center">
+    <div className="w-full max-w-6xl flex flex-col items-center text-white lg:mt-10 2xl:mt-22">
+      <h1 className="lg:text-3xl 2xl:text-5xl font-extrabold mb-3 lg:mb-6 text-center">
         🎬 Find Movies with AI
       </h1>
 
@@ -74,15 +70,20 @@ const GptSearchBar = () => {
         <input
           ref={searchText}
           type="text"
-          className="flex-1 text-white bg-zinc-800 border border-zinc-700 p-4 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 transition"
+          className="flex-1 text-xs w-5/6 2xl:w-9/12 lg:text-lg 2xl:text-2xl text-white bg-zinc-800 border border-zinc-700 p-2 lg:p-4 2xl:p-6 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 transition"
           placeholder="Search by mood, genre, or movie name..."
         />
         <button
           type="submit"
-          className="bg-button-red px-6 py-3 rounded-md font-semibold hover:bg-red-700 transition hover:scale-105"
+          className="bg-button-red px-4 py-2 lg:px-6 lg:py-3 2xl:p-6 text-xs lg:text-lg 2xl:text-2xl rounded-md font-semibold hover:bg-red-700 transition hover:scale-105"
         >   Search
         </button>
       </form>
+          <h1 
+      onClick={() => {
+        handleClearMovies();
+      }}
+      className="flex mt-2 mx-auto text-button-red text-sm lg:text-lg hover:cursor-pointer hover:underline">Clear Result</h1>
       {errorMessage && (
         <p className="text-red-400 mt-4 text-center text-sm">{errorMessage}</p>
       )}
