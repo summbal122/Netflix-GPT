@@ -118,11 +118,6 @@ const Login = () => {
         </div>
       </div>
     </div>
-  
-
-    <div className="bg-footer-black">
-   <h1>jo</h1>
-    </div>
     </div>
   );
 };

@@ -13,6 +13,7 @@ import useTvOnTheAir from "../hooks/useTvOnTheAir";
 import usePopularTv from "../hooks/usePopularTv";
 import useTopRatedTv from "../hooks/useTopRatedTv";
 import useGenres from "../hooks/useGenres";
+import useTrending from "../hooks/useTrending";
 const Browse = () => {
   const showGptSearch = useSelector((store => store.gpt.showGptSearch))
   useGetPlayingMovies();
@@ -25,7 +26,7 @@ const Browse = () => {
   usePopularTv();
   useTopRatedTv();
   useGenres();
-  
+  useTrending();
 
   return (
     <div>
