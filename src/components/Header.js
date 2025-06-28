@@ -59,7 +59,7 @@ const Header = () => {
   }, [auth, dispatch, navigate]);
 
   return (
-    <div className="flex justify-center w-full bg-black/60 fixed z-50">
+    <div className="flex justify-center w-full bg-black/60 fixed z-50 p-4">
       <div className="w-11/12 lg:w-10/12 pb-1.5 lg:pb-0 pt-2 lg:pt-1 flex flex-col md:flex-row items-center">
         <div className="flex items-center justify-between w-full md:w-fit">
           <img className="w-16 md:w-28 lg:w-48 2xl:w-72" src={IMG} alt="logo" />
