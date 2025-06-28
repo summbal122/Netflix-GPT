@@ -9,7 +9,7 @@ const MovieList = ({ title, movies }) => {
   };
   return (
     <div className='lg:px-10 pb-4 lg:pb-8'>
-      <h1 className='text-xs md:text-md lg:text-xl 2xl:text-4xl text-white font-bold mb-2 lg:mb-4 2xl:mb-10'>{title}</h1>
+      <h1 className='text-xs md:text-md lg:text-lg 2xl:text-4xl text-white font-bold mb-2 lg:mb-4 2xl:mb-10'>{title}</h1>
       <div className='overflow-x-auto scrollbar-hidden'>
         <div className='flex gap-0.5 lg:gap-3 w-max'>
           {movies.map((movie) => (

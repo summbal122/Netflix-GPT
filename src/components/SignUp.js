@@ -60,13 +60,13 @@ const SignUp = () => {
 
 
         <div className="flex justify-center items-center h-screen w-full ">
-          <div className="flex flex-col  md:w-xl lg:w-3xl  2xl:w-2/3 py-14 px-12 gap-2 lg:gap-4 2xl:gap-8 rounded-md items-center text-center">
+          <div className="flex flex-col  md:w-xl lg:w-2xl 2xl:w-2/3 py-14 px-4 md:px-12 gap-2 lg:gap-3 2xl:gap-8 rounded-md items-center text-center">
             
-            <h1 className="text-white text-2xl md:text-4xl lg:text-6xl  font-extrabold 2xl:text-9xl md:leading-12 lg:leading-16 2xl:leading-32 ">Unlimited movies, TV shows, and more</h1>
-            <p className="text-white font-bold text-xs md:text-md lg:text-xl 2xl:text-5xl">Starts at Rs 250. Cancel anytime.</p>
-            <p className="text-white text-[10px] md:text-xs lg:text-lg 2xl:text-3xl">Ready to watch? Enter your email to create or restart your membership.</p>
+            <h1 className="text-white text-2xl md:text-4xl lg:text-5xl  font-extrabold 2xl:text-9xl leading-6 md:leading-12 lg:leading-10 2xl:leading-32 ">Unlimited movies, TV shows, and more</h1>
+            <p className="text-white font-bold text-[10px] md:text-md lg:text-xl 2xl:text-5xl">Starts at Rs 250. Cancel anytime.</p>
+            <p className="text-white text-[8px] md:text-xs lg:text-lg 2xl:text-3xl">Ready to watch? Enter your email to create or restart your membership.</p>
             <form className="flex flex-col  w-full 2xl:w-3/4 gap-4 items-center">
-              <div className="flex gap-4 items-center w-full">
+              <div className="flex gap-1 md:gap-4 items-center w-full">
              
               <input
               ref={email}
@@ -84,14 +84,16 @@ const SignUp = () => {
               <button
                onSubmit={(e) => e.preventDefault()} 
                onClick={handleButtonClick}
-               className="bg-button-red text-[10px] md:text-sm lg:text-xl 2xl:text-6xl  text-white  font-semibold py-3 px-5 2xl:py-8 2xl:px-12 cursor-pointer rounded-sm hover:opacity-95 flex gap-4 2xl:gap-8 items-center ">Get Started <i className="fa-solid fa-chevron-right"></i> </button>
+               className="bg-button-red text-[10px] md:text-sm lg:text-xl 2xl:text-6xl  text-white  font-semibold py-2 px-3 md:py-3 md:px-5 2xl:py-8 2xl:px-12 cursor-pointer rounded-sm hover:opacity-95 flex gap-2 md:gap-4 2xl:gap-8 items-center ">
+                Get Started <i className="fa-solid fa-chevron-right">
+                  </i> </button>
               
             </form>
             <div className="flex items-center gap-4">
               <p className="text-white text-[10px] md:text-xs lg:text-md 2xl:text-3xl">Don't have an account?</p>
                <button
               onClick={handleSignIn}
-              className="text-white bg-button-red py-1.5 px-3 2xl:py-5 text-[10px]  2xl:px-8 md:text-xs lg:text-md 2xl:text-3xl font-semibold rounded-sm"
+              className="text-white bg-button-red py-1.5 px-2 md:px-3 2xl:py-5 text-[10px]  2xl:px-8 md:text-xs lg:text-md 2xl:text-3xl font-semibold rounded-sm"
             >
               Sign In
             </button>
