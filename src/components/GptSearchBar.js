@@ -56,13 +56,13 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="w-full max-w-6xl flex flex-col items-center text-white lg:mt-10 2xl:mt-22">
+    <div className="w-full border-5 flex flex-col items-center justify-center text-white min-h-screen ">
       <h1 className="lg:text-3xl 2xl:text-5xl font-extrabold mb-3 lg:mb-6 text-center">
         🎬 Find Movies with AI
       </h1>
 
       <form
-        className="flex flex-col md:flex-row items-center w-full gap-4"
+        className="flex flex-col md:flex-row items-center w-8/12 2xl:w-full border gap-4"
         onSubmit={(e) => {
           e.preventDefault();
           handleGptSearchClick();
@@ -70,7 +70,7 @@ const GptSearchBar = () => {
         <input
           ref={searchText}
           type="text"
-          className="flex-1 text-xs w-5/6 2xl:w-9/12 lg:text-lg 2xl:text-2xl text-white bg-zinc-800 border border-zinc-700 p-2 lg:p-4 2xl:p-6 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 transition"
+          className="flex-1 text-xs lg:text-lg 2xl:text-2xl text-white bg-zinc-800 border border-zinc-700 p-2 lg:p-4 2xl:p-6 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 transition"
           placeholder="Search by mood, genre, or movie name..."
         />
         <button

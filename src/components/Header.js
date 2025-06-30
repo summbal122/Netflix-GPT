@@ -59,7 +59,7 @@ const Header = () => {
   }, [auth, dispatch, navigate]);
 
   return (
-    <div className="flex justify-center w-full bg-black/60 fixed z-50 p-4">
+    <div className="flex justify-center w-full bg-black/60 fixed z-50 p-1">
       <div className="w-11/12 lg:w-10/12 pb-1.5 lg:pb-0 pt-2 lg:pt-1 flex flex-col md:flex-row items-center">
         <div className="flex items-center justify-between w-full md:w-fit">
           <img className="w-16 md:w-28 lg:w-48 2xl:w-72" src={IMG} alt="logo" />
@@ -147,10 +147,10 @@ const Header = () => {
               ></i>
               {showChevron && (
                 <div className="absolute mt-36 w-[100px]  right-[-20px] 2xl:mt-40 border border-[#141414] bg-black/90 text-white/60 font-semibold rounded-sm text-sm space-y-2 p-3 z-50">
-                  <h1 className="hover:opacity-60 cursor-pointer lg:text-lg 2xl:text-lg">
+                  <h1 className="hover:opacity-60 cursor-pointer lg:text-md 2xl:text-lg">
                     Manage</h1>
                   <h2
-                    className="text-button-red font-semibold hover:opacity-60 cursor-pointer lg:text-lg 2xl:text-lg"
+                    className="text-button-red font-semibold hover:opacity-60 cursor-pointer lg:text-md 2xl:text-lg"
                     onClick={() => {
                       handleSignOut();
                       setShowChevron(false);
