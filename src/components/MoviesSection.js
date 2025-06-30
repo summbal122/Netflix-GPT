@@ -5,13 +5,13 @@ const MoviesSection = () => {
   const movies = useSelector(store => store.movies);
   return (
     <div
-     className="text-white flex flex-col gap-4 lg:gap-8 bg-[#141414] px-3 md:px-6 ">
+     className="text-white flex flex-col  gap-4 lg:gap-8 bg-[#141414] px-3 md:px-6 ">
       
-      <div className="mt-[-30px] md:mt-[-80px] lg:mt-[-190px]  relative z-20 text-white "> 
+      <div className="mt-[30px] md:mt-[-80px] lg:mt-[-100px]   relative z-20 text-white "> 
      <MovieList title={"Trending these days"} movies= {movies.trending} />
       </div>
       <div id="movies-section">
-      <h1 className='text-sm md:text-xl lg:text-2xl 2xl:text-5xl font-bold mb-2 lg:mb-6 2xl:mb-12 text-button-red'>Movies</h1>
+      <h1 className='text-lg md:text-xl lg:text-2xl 2xl:text-5xl font-bold mb-2 lg:mb-6 2xl:mb-12 text-button-red'>Movies</h1>
       <MovieList title={"Now playing"} movies= {movies.nowPlayingMovies} />
       <MovieList title={"Up Coming"} movies= {movies.upComingMovies} />
       <MovieList title={"Popular"} movies= {movies.popularMovies} />

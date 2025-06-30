@@ -9,7 +9,7 @@ import { useState } from "react"
     <div className='space-y-4'>
       <h1 className='text-xl md:text-2xl font-bold text-white'> More Reasons to Join</h1>
       <div className='grid lg:grid-cols-2 xl:grid-cols-4 gap-4 '>
-        <div className='bg-[#1b1b36] p-6 flex flex-col gap-16 justify-between bg-gradient-to-t from-pink-800/20 rounded-xl'> 
+        <div className='bg-[#1b1b36] p-6 flex flex-col gap-16 justify-between bg-gradient-to-t from-pink-800/20 rounded-xl hover:cursor-pointer'> 
           <div className='text-white space-y-4' >
             <h1 className='font-bold text-2xl'>Enjoy on your TV</h1>
             <p className='text-sm text-white/70 '>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
@@ -20,7 +20,7 @@ import { useState } from "react"
           
         </div>
          <div className='bg-[#1b1b36] p-6 flex flex-col gap-16 justify-between bg-gradient-to-t from-pink-800/20
-          rounded-xl'> 
+          rounded-xl hover:cursor-pointer'> 
           <div className='text-white space-y-4' >
             <h1 className='font-bold text-2xl'>Download your shows to watch offline</h1>
             <p className='text-sm text-white/70 '>Save your favorites easily and always have something to watch.</p>
@@ -32,7 +32,7 @@ import { useState } from "react"
         </div>
 
        <div className='bg-[#1b1b36] p-6 flex flex-col gap-16 justify-between bg-gradient-to-t from-pink-800/20
-        rounded-xl'> 
+        rounded-xl hover:cursor-pointer'> 
 
           <div className='text-white space-y-4' >
             <h1 className='font-bold text-xl'>Enjoy on your TV</h1>
@@ -46,7 +46,7 @@ import { useState } from "react"
         </div>
 
       <div className='bg-[#1b1b36] p-6 flex flex-col gap-16 justify-between bg-gradient-to-t from-pink-800/20
-       rounded-xl'> 
+       rounded-xl hover:cursor-pointer'> 
           <div className='text-white space-y-4' >
             <h1 className='font-bold text-xl'>Enjoy on your TV</h1>
             <p className='text-sm text-white/70 '>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
@@ -70,7 +70,7 @@ import { useState } from "react"
             <p className='text-md md:text-2xl '>What is Netflix?</p>
             <span  
             onClick={() => setOpenIndex(openIndex === 0 ? null : 0)}
-            className='text-xl md:text-xl font-thin'>{openIndex=== 0 ? '-' : '+'}</span>
+            className='text-xl md:text-xl font-thin hover:cursor-pointer'>{openIndex=== 0 ? '-' : '+'}</span>
            
           </div>
           {openIndex === 0 && (
@@ -88,7 +88,7 @@ import { useState } from "react"
             <p className='text-md md:text-2xl '>How much does Netflix cost?</p>
             <span  
             onClick={() => setOpenIndex(openIndex === 1 ? null : 1)}
-            className='text-xl font-thin'>{openIndex === 1 ? '-' : '+'}</span>
+            className='text-xl font-thin hover:cursor-pointer'>{openIndex === 1 ? '-' : '+'}</span>
            
           </div>
           {openIndex === 1 && (
@@ -105,7 +105,7 @@ import { useState } from "react"
             <p className='text-md md:text-2xl '>Where can I watch?</p>
             <span  
             onClick={() => setOpenIndex(openIndex === 2 ? null : 2)}
-            className='text-xl font-thin'>{openIndex === 2 ? '-' : '+'}</span>
+            className='text-xl font-thin hover:cursor-pointer'>{openIndex === 2 ? '-' : '+'}</span>
            
           </div>
           {openIndex === 2 && (
@@ -123,7 +123,7 @@ import { useState } from "react"
             <p className='text-md md:text-2xl '>How do I cancel?</p>
             <span  
             onClick={() => setOpenIndex(openIndex === 3 ? null : 3)}
-            className='text-xl font-thin'>{openIndex=== 3 ? '-' : '+'}</span>
+            className='text-xl font-thin hover:cursor-pointer'>{openIndex=== 3 ? '-' : '+'}</span>
            
           </div>
           {openIndex === 3 && (
@@ -140,7 +140,7 @@ import { useState } from "react"
             <p className='text-md md:text-2xl '>what can I watch on Netflix?</p>
             <span  
             onClick={() => setOpenIndex(openIndex === 4 ? null : 4)}
-            className='text-xl font-thin'>{openIndex===4 ? '-' : '+'}</span>
+            className='text-xl font-thin hover:cursor-pointer'>{openIndex===4 ? '-' : '+'}</span>
            
           </div>
           {openIndex === 4 && (
@@ -157,7 +157,7 @@ import { useState } from "react"
             <p className='text-md md:text-2xl '>Is Netflix good for Kids?</p>
             <span  
             onClick={() => setOpenIndex(openIndex === 5 ? null : 5)}
-            className='text-xl font-thin'>{openIndex===5 ? '-' : '+'}</span>
+            className='text-xl font-thin hover:cursor-pointer'>{openIndex===5 ? '-' : '+'}</span>
            
           </div>
           {openIndex === 5 && (

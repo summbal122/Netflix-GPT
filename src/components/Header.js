@@ -59,9 +59,12 @@ const Header = () => {
   }, [auth, dispatch, navigate]);
 
   return (
-      <div className="w-11/12 lg:w-10/12 pb-1.5 lg:pb-0 pt-2 lg:pt-1 flex flex-col md:flex-row items-center">
+ 
+    <div className="fixed top-0 flex w-full justify-center z-50">
+      <img className=" absolute top-2 left-12 lg:left-18 2xl:left-14 h-18 md:w-44 lg:h-16 2xl:h-36 lg:w-40 2xl:w-md" src={IMG} alt="logo" />
+      <div className="absolute top-8 ml-10 2xl:top-12  w-7/12 lg:w-7/12 ">
         <div className="flex items-center justify-between w-full md:w-fit">
-          <img className="w-16 md:w-28 lg:w-48 2xl:w-72" src={IMG} alt="logo" />
+          
           <div className="md:hidden flex items-center gap-2 justify-end">
             {user && (
               location.pathname === "/browse" &&
@@ -88,7 +91,7 @@ const Header = () => {
 
         {user && (
           <div className="hidden md:flex w-full justify-between items-center gap-3 ml-4">
-            <ul className="flex gap-2 2xl:gap-6 text-xs lg:text-sm 2xl:text-2xl text-white">
+            <ul className="flex gap-2 2xl:gap-6 text-xs lg:text-sm 2xl:text-3xl text-white">
               <li
                 className="hover:font-bold cursor-pointer"
                 onClick={() => {
@@ -204,7 +207,8 @@ const Header = () => {
           </div>
         )}
       </div>
-    
+   
+    </div>
   );
 };
 

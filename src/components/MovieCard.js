@@ -6,20 +6,20 @@ const MovieCard = ({ posterPath, vote, releaseDate, overview, isSelected, onClic
   return (
     <div onClick={onClick} className="cursor-pointer relative ">
       <img
-        className="w-14 h-18 md:w-36 md:h-52 2xl:w-sm 2xl:h-10/12 rounded transform transition duration-300 ease-in-out hover:scale-115 hover:shadow-xl hover:shadow-red-800/20 border border-[#141414]"
+        className="md:w-50 md:h-68 lg:w-44 2xl:w-sm 2xl:h-10/12 rounded transform transition duration-300 ease-in-out hover:scale-115 hover:shadow-xl hover:shadow-red-800/20 border border-[#141414]"
         src={IMG_CDN_URL + posterPath}
         alt="movie poster"
       />
       {vote> 0 ? (
        <h1 className="text-yellow-500 mt-0.5 text-[6px] lg:text-[10px] 2xl:text-lg font-semibold flex items-center gap-1">
-        <i className="fa-solid text-[6px] lg:text-[10px]  2xl:text-lg fa-star text-yellow-400" />
+        <i className="fa-solid text-[10px]  2xl:text-lg fa-star text-yellow-400" />
         {vote.toFixed(1)}
       </h1>
-      ) : <h2 className="text-yellow-500  mt-1 text-[6px] lg:text-[10px]  2xl:text-lg">Not rated </h2>}
+      ) : <h2 className="text-yellow-500  mt-1 text-[10px]  2xl:text-lg">Not rated </h2>}
  
       {isSelected && (
         <div className="fixed inset-0 bg-black/80 flex justify-center items-center z-50 p-4 text-xl">
-          <div className="bg-[#6D6D6E]/50 text-white p-3 lg:p-6 2xl:p-8 rounded-lg max-w-3xl w-full text-sm relative">
+          <div className="bg-[#6D6D6E]/50 text-white p-3 lg:p-6 2xl:p-8 rounded-lg max-w-2xl w-full text-sm relative">
             <button
               className="absolute text-sm lg:text-lg 2xl:text-2xl top-2 right-3 text-white"
               onClick={(e) => {
@@ -29,11 +29,12 @@ const MovieCard = ({ posterPath, vote, releaseDate, overview, isSelected, onClic
             >
               &times;
             </button>
-            <h2 className="text-white text-sm lg:text-lg 2xl:text-2xl font-bold mb-2 lg:mb-5">Release Date:{" "}<span className='text-sm font-thin'>{releaseDate}</span></h2>
+            {releaseDate && <h2 className="text-white text-md lg:text-lg 2xl:text-2xl font-bold mb-2 lg:mb-5">Release Date:{" "}<span className='text-sm font-thin'>{releaseDate}</span></h2> }
+            
             <h3 className="text-amber-300 mb-1 lg:mb-2 text-md lg:text-xl 2xl:text-3xl font-semibold">
             Overview
             </h3>
-           {overview ? (<p className='text-xs lg:text-lg 2xl:text-2xl'>{overview}</p>) : "Overview not avaiable"} 
+           {overview ? (<p className='text-md lg:text-lg 2xl:text-2xl'>{overview}</p>) : "Overview not avaiable"} 
           </div>
         </div>
       )}

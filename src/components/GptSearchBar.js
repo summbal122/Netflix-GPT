@@ -56,13 +56,13 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="w-full border-5 flex flex-col items-center justify-center text-white min-h-screen ">
-      <h1 className="lg:text-3xl 2xl:text-5xl font-extrabold mb-3 lg:mb-6 text-center">
+    <div className="w-full flex flex-col items-center justify-center text-white ">
+      <h1 className="lg:text-3xl 2xl:text-5xl font-extrabold mb-3 lg:mb-6 text-center 2xl:mt-20">
         🎬 Find Movies with AI
       </h1>
 
       <form
-        className="flex flex-col md:flex-row items-center w-8/12 2xl:w-full border gap-4"
+        className="flex flex-col md:flex-row items-center w-8/12 2xl:w-6/12 border gap-4"
         onSubmit={(e) => {
           e.preventDefault();
           handleGptSearchClick();

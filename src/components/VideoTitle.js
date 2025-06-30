@@ -2,9 +2,9 @@
 const VideoTitle = ({ title, overview, onPlay, showTrailer }) => {
   
   return (
-    <div className='w-screen aspect-video absolute text-white bg-gradient-to-r h-60 md:h-screen from-black'>
-      <div className="absolute top-32 lg:top-3/12 w-[150px]  md:w-xs lg:w-sm 2xl:w-3xl space-y-2 lg:space-y-4 2xl:space-y-10 ml-15 md:ml-20">
-        <h1 className='text-sm md:text-3xl lg:text-5xl 2xl:text-8xl font-bold lg:mb-8'>{title}</h1>
+    <div className='absolute w-screen text-white  bg-gradient-to-b lg:bg-gradient-to-r md:h-screen md:from-black/70'>
+      <div className="absolute  aspect-video top-36 lg:top-3/12 2xl:top-4/12 w-[150px]  md:w-xs lg:w-sm 2xl:w-3xl space-y-2 lg:space-y-4 2xl:space-y-10 ml-15 md:ml-20">
+        <h1 className='text-sm md:text-3xl lg:text-5xl 2xl:text-8xl font-bold lg:mb-4'>{title}</h1>
         <p className=' text-[5px] md:text-xs lg:text-md 2xl:text-2xl'>{overview}</p>
         <div className='space-x-1 lg:space-x-2 2xl:space-x-4 flex'>
           <button

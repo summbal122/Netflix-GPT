@@ -8,7 +8,7 @@ const VideoBackground = ({ id, showTrailer }) => {
   useMovieTrailer(id);
 
   return (
-    <div className="aspect-video w-screen bg-[#141414]">
+    <div className="aspect-video w-screen lg:h-screen bg-[#141414]">
       {showTrailer && trailerVideo?.key ? (
         <iframe
           className="w-full md:h-12/12 lg:h-screen"
@@ -21,7 +21,7 @@ const VideoBackground = ({ id, showTrailer }) => {
       
       ) : (
         <img
-          className="w-screen h-12/12 lg:h-screen"
+          className=" w-screen h-12/12 lg:min-h-screen"
           alt="bg"
           src="https://4kwallpapers.com/images/walls/thumbs_3t/22358.jpg"
         />
