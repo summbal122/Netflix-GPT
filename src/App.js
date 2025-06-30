@@ -7,7 +7,7 @@ import Body from "./components/Body";
 import appStore from "./utils/appStore";
 import { Provider } from "react-redux";
 import GptSearch from "./components/GptSearch";
-import Footer from "./components/Footer";
+
 
 
 const appRouter = createBrowserRouter([
