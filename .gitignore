@@ -50,3 +50,4 @@ yarn-error.log*
 .eslintcache
 jest-cache/
 jest-test-results.json
+.parcel-cache/
