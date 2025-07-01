@@ -1,6 +1,6 @@
 # Netflix GPT 🎬🔍
 
-A responsive, AI-powered movie recommendation app built with **React**, **Redux**, **Tailwind CSS**, and **Firebase**. Netflix GPT mimics the Netflix UI and integrates **OpenAI** to provide smart movie recommendations via chat-based search.
+A responsive, AI-powered movie recommendation app built with **React**, **Redux**, **Tailwind CSS**, and **Firebase**. Netflix GPT mimics the Netflix UI and integrates **OpenAI** to provide smart movie recommendations via a search interface.
 
 > 🚀 **Live Demo**: [netflixgpt-f6131.web.app](https://netflixgpt-f6131.web.app/)
 
