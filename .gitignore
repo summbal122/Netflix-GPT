@@ -15,7 +15,8 @@ yarn-debug.log*
 yarn-error.log*
 .env# Dependency directory
 /node_modules/
-
+.firebase/
+.firebaserc
 # Build output
 /dist/
 .parcel-cache/
@@ -39,16 +40,5 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
-
-# Log files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Lint/Test cache (optional)
-.cache/
-.eslintcache
-jest-cache/
-jest-test-results.json
 .parcel-cache/
 dist/
