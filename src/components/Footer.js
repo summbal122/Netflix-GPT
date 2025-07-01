@@ -25,7 +25,7 @@ const Footer = () => {
       <a href='/' className="hover:underline">Corporate Information</a>
     </div>
 
-    <button className="text-[10px] md:text-sm 2xl:text-2xl border border-gray-500 px-4 py-1 text-white hover:bg-gray-700 transition">
+    <button className="text-[10px] md:text-sm 2xl:text-2xl  px-4 py-1 text-white hover:bg-gray-700 transition">
       Service Code
     </button>
 

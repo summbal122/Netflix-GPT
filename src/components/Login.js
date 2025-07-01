@@ -36,7 +36,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="relative min-h-screen flex  border-pink-400 items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/PK-en-20250609-TRIFECTA-perspective_fe615052-4a49-4618-b131-4499f9cf0058_small.jpg')] min-h-screen">
+      <div className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/7968847f-3da9-44b3-8bbb-13a46579881f/web/PK-en-20250609-TRIFECTA-perspective_fe615052-4a49-4618-b131-4499f9cf0058_small.jpg')] min-h-screen">
         <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
         <div className="relative z-10 p-6">
          

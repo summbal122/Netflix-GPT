@@ -35,7 +35,7 @@ const SignUp = () => {
         
         }).catch((error) => {
         // An error occurred
-        // ...
+       
         });
   })
   .catch((error) => {
@@ -84,7 +84,7 @@ const SignUp = () => {
               <button
                onSubmit={(e) => e.preventDefault()} 
                onClick={handleButtonClick}
-               className="bg-button-red text-sm lg:text-xl 2xl:text-6xl  text-white  font-semibold py-2 px-3 md:py-3 md:px-5 2xl:py-8 2xl:px-12 cursor-pointer rounded-sm 2xl:rounded-xl hover:opacity-95 flex gap-2 md:gap-4 2xl:gap-8 items-center ">
+               className="bg-button-red text-sm lg:text-xl 2xl:text-6xl  text-white  font-semibold py-2 px-3 md:py-3 md:px-5 2xl:py-8 2xl:px-12 cursor-pointer rounded-sm 2xl:rounded-xl flex gap-2 md:gap-4 2xl:gap-8 items-center hover:opacity-80 ">
                 Get Started <i className="fa-solid fa-chevron-right">
                   </i> </button>
               
@@ -93,16 +93,16 @@ const SignUp = () => {
               <p className="text-white text-md 2xl:text-4xl">Don't have an account?</p>
                <button
               onClick={handleSignIn}
-              className="text-white font-semibold hover:underline text-lg 2xl:text-5xl hover:cursor-pointer"
+              className="text-white font-semibold hover:underline text-md lg:text-sm 2xl:text-xl hover:cursor-pointer"
             >
               Sign In
             </button>
             </div>
            
-
-          </div>
           <p className="text-red-500">
           {errorMessage} </p>
+          </div>
+         
         </div>
       </div>
     

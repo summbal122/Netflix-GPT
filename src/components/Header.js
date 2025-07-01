@@ -9,6 +9,7 @@ import { toggleGptSearchView } from "../utils/GptSlice";
 import { Link } from "react-scroll";
 import { useLocation } from "react-router";
 import useGenres from "../hooks/useGenres";
+import { NETFLIX_PROFILE } from "../utils/Constants";
 
 const Header = () => {
   useGenres();
@@ -17,7 +18,6 @@ const Header = () => {
   const genresRef = useRef(null);
   const [showChevron, setShowChevron] = useState(false);
   const dropdownRef = useRef(null);
-  const [mobileNav, setMobileNav] = useState(false);
   const location = useLocation();
   const auth = getAuth();
   const user = useSelector((store) => store.user);
@@ -59,39 +59,12 @@ const Header = () => {
   }, [auth, dispatch, navigate]);
 
   return (
- 
     <div className="fixed top-0 flex w-full justify-center z-50">
-      <img className=" absolute top-2 left-12 lg:left-18 2xl:left-14 h-18 md:w-44 lg:h-16 2xl:h-36 lg:w-40 2xl:w-md" src={IMG} alt="logo" />
-      <div className="absolute top-8 ml-10 2xl:top-12  w-7/12 lg:w-7/12 ">
-        <div className="flex items-center justify-between w-full md:w-fit">
-          
-          <div className="md:hidden flex items-center gap-2 justify-end">
-            {user && (
-              location.pathname === "/browse" &&
-              !showGptSearch && (
-                <button
-                  onClick={handleGptSearchClick}
-                  className="text-black bg-white px-6 md:px-3 py-0.5 md:py-1 rounded-sm text-[9px] lg:text-xs 2xl:text-2xl font-semibold"
-                >
-                  GPT Search
-                </button>
-              )
-            )}
-            <img
-              className="w-4 lg:w-6 2xl:w-10 rounded-xs"
-              alt="profile"
-              src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
-            />
-            <i
-              className="fa-solid fa-bars text-white text-xs md:text-lg ml-2"
-              onClick={() => setMobileNav(!mobileNav)}
-            ></i>
-          </div>
-        </div>
-
+      <img className="absolute top-3 left-12 lg:top-5 lg:left-18 2xl:left-14 h-18 md:w-44 lg:h-16 2xl:h-36 lg:w-40 2xl:w-md" src={IMG} alt="logo" />
+      <div className="absolute top-8 ml-22 2xl:top-12 w-8/12 lg:w-7/12">
         {user && (
-          <div className="hidden md:flex w-full justify-between items-center gap-3 ml-4">
-            <ul className="flex gap-2 2xl:gap-6 text-xs lg:text-sm 2xl:text-3xl text-white">
+          <div className="flex w-full justify-between items-center gap-3 ml-4">
+            <ul className="flex gap-3 2xl:gap-6 text-sm lg:text-sm 2xl:text-3xl text-white">
               <li
                 className="hover:font-bold cursor-pointer"
                 onClick={() => {
@@ -103,21 +76,21 @@ const Header = () => {
               </li>
               {!showGptSearch && (
                 <>
-                  <li className="hover:font-bold">
+                  <li className="hover:font-bold hover:cursor-pointer">
                     <Link smooth duration={500} offset={-90} to="tv-shows">
                       TV Shows
                     </Link>
                   </li>
-                  <li className="hover:font-bold">
+                  <li className="hover:font-bold hover:cursor-pointer">
                     <Link smooth duration={500} offset={-90} to="movies-section">
                       Movies
                     </Link>
                   </li>
-                  <li className="hover:font-bold">Recently Added</li>
+                  <li className="hover:font-bold hover:cursor-pointer">Recently Added</li>
                   <div className="relative" ref={genresRef}>
-                    <li className="hover:font-bold" onClick={handleGenre}>Genres</li>
+                    <li className="hover:font-bold hover:cursor-pointer" onClick={handleGenre}>Genres</li>
                     {showGenre && (
-                      <div className="absolute border border-[#141414] w-36 top-9 left-[-28px] bg-black/90 text-white/60 font-semibold rounded-sm text-sm space-y-1 p-3 z-50">
+                      <div className="absolute border border-[#141414] w-36 top-7 left-[-28px] bg-[#141414] text-white/60 font-semibold rounded-sm text-sm space-y-1 p-3 z-50">
                         {genres.map((genre) => (
                           <h1 key={genre.id} className="hover:opacity-60">{genre.name}</h1>
                         ))}
@@ -131,28 +104,28 @@ const Header = () => {
             {location.pathname === "/browse" && !showGptSearch && (
               <button
                 onClick={handleGptSearchClick}
-                className="text-black bg-white py-1 px-4 2xl:px-18 2xl:py-3 text-xs 2xl:text-2xl font-semibold rounded-sm hover:opacity-60"
+                className="text-black bg-white py-2 px-6 2xl:px-18 2xl:py-3 text-md 2xl:text-2xl font-semibold rounded-sm 2xl:rounded-xl hover:opacity-80"
               >
                 GPT Search
               </button>
             )}
 
-            <div className="flex items-center gap-2 2xl:gap-4 relative" ref={dropdownRef}>
+            <div className="flex items-center gap-4 2xl:gap-4 relative" ref={dropdownRef}>
               <img
-                className="w-6 2xl:w-14 rounded-xs cursor-pointer"
+                className="w-10 2xl:w-20 rounded-md 2xl:rounded-xl cursor-pointer"
                 alt="profile"
-                src="https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
+                src={NETFLIX_PROFILE}
               />
               <i
                 onClick={handleShowChevron}
-                className={`fa-solid ${showChevron ? "fa-chevron-up" : "fa-chevron-down"} text-white cursor-pointer text-xs 2xl:text-2xl`}
+                className={`fa-solid ${showChevron ? "fa-chevron-up" : "fa-chevron-down"} text-white cursor-pointer text-2xl lg:text-sm 2xl:text-2xl`}
               ></i>
               {showChevron && (
-                <div className="absolute mt-36 w-[100px]  right-[-20px] 2xl:mt-40 border border-[#141414] bg-black/90 text-white/60 font-semibold rounded-sm text-sm space-y-2 p-3 z-50">
-                  <h1 className="hover:opacity-60 cursor-pointer lg:text-md 2xl:text-lg">
+                <div className="absolute mt-36 w-36 2xl:w-56 flex flex-col 2xl:p-6 items-center right-[-20px] 2xl:right-[-50px] 2xl:mt-54  bg-[#141414] text-white/60 font-semibold rounded-sm text-sm 2xl:rounded-xl space-y-1 2xl:space-y-2 p-3 z-50">
+                  <h1 className="hover:opacity-60 cursor-pointer text-lg lg:text-md 2xl:text-2xl">
                     Manage</h1>
                   <h2
-                    className="text-button-red font-semibold hover:opacity-60 cursor-pointer lg:text-md 2xl:text-lg"
+                    className="text-button-red font-semibold hover:opacity-60 cursor-pointer text-lg lg:text-md 2xl:text-2xl"
                     onClick={() => {
                       handleSignOut();
                       setShowChevron(false);
@@ -165,49 +138,7 @@ const Header = () => {
             </div>
           </div>
         )}
-
-        {mobileNav && user && (
-          <div className="md:hidden mt-2 w-3/6 right-2 absolute top-9 bg-black/80 text-white py-3 rounded-sm space-y-2 text-xs font-semibold">
-            <ul className="flex flex-col items-center gap-2 text-[10px]">
-              <li
-                className="cursor-pointer"
-                onClick={() => {
-                  if (showGptSearch) dispatch(toggleGptSearchView());
-                  navigate("/browse");
-                  setMobileNav(false);
-                }}
-              >
-                Home
-              </li>
-              {!showGptSearch && (
-                <>
-                  <li>
-                    <Link smooth duration={500} offset={-90} to="tv-shows">
-                      TV Shows
-                    </Link>
-                  </li>
-                  <li>
-                    <Link smooth duration={500} offset={-90} to="movies-section">
-                      Movies
-                    </Link>
-                  </li>
-                  <li>Recently Added</li>
-                  <li onClick={handleGenre}>Genres</li>
-                  {showGenre && (
-                    <div className="text-white/60 space-y-1 px-3">
-                      {genres.map((genre) => (
-                        <h1 key={genre.id} className="text-xs">{genre.name}</h1>
-                      ))}
-                    </div>
-                  )}
-                </>
-              )}
-              <li onClick={handleSignOut} className="text-button-red">Sign Out</li>
-            </ul>
-          </div>
-        )}
       </div>
-   
     </div>
   );
 };

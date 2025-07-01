@@ -9,7 +9,7 @@ const VideoTitle = ({ title, overview, onPlay, showTrailer }) => {
         <div className='space-x-1 lg:space-x-2 2xl:space-x-4 flex'>
           <button
             onClick={onPlay}
-            className="flex items-center gap-1 md:gap-3 px-3 md:px-6 py-1 md:py-3 2xl:px-18 2xl:py-6 bg-white text-black rounded-xs md:rounded-md text-[6px] md:text-xs lg:text-lg 2xl:text-3xl font-semibold hover:cursor-pointer transition duration-200 hover:bg-gray-200"
+            className="flex items-center gap-1 md:gap-3 px-3 md:px-6 py-1 md:py-3 2xl:px-18 2xl:py-6 bg-white text-black rounded-xs md:rounded-md text-[6px] md:text-xs lg:text-lg 2xl:text-3xl font-semibold hover:cursor-pointer transition duration-200 hover:opacity-80"
           >
             {showTrailer ? ( <>
             <i className="fa-solid fa-pause text-[8px] md:text-xl  2xl:text-3xl"></i>
@@ -22,7 +22,7 @@ const VideoTitle = ({ title, overview, onPlay, showTrailer }) => {
               </>
             )}
            </button>
-          <button className='text-white font-thick px-3 md:px-12 py-1 md:py-3 2xl:px-18 2xl:py-6 bg-[#6D6D6E] rounded-xs md:rounded-md text-[6px] md:text-xs lg:text-lg  2xl:text-3xl  flex items-center gap-1 md:gap-3 hover:cursor-pointer'>
+          <button className='text-white font-thick px-3 md:px-12 py-1 md:py-3 2xl:px-18 2xl:py-6 bg-[#6D6D6E] rounded-xs md:rounded-md text-[6px] md:text-xs lg:text-lg  2xl:text-3xl  flex items-center gap-1 md:gap-3 hover:cursor-pointer hover:opacity-80'>
             <i className="fa-solid fa-circle-info text-[8px] md:text-xl  2xl:text-3xl "></i> More Info
           </button>
         </div>

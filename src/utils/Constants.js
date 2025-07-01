@@ -1,5 +1,5 @@
+export const NETFLIX_PROFILE = "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp"
 export const MOVIES_URL = "https://api.themoviedb.org/3/movie/changes?page=1";
-
 export const API_OPTIONS = {
   method: "GET",
   headers: {
