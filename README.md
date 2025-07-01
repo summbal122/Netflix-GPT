@@ -35,8 +35,8 @@ A responsive, AI-powered movie recommendation app built with **React**, **Redux*
 ### 📝 Signup Page
 ![Signup](image-3.png)
 
-### 🔐 Login Page
-![Sign In](image-2.png)
+### 🔐 Sign In Page
+![Sign In](image-4.png)
 
 ### 🎬 Main Browser UI
 ![Main Browser](image.png)
