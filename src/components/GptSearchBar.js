@@ -62,31 +62,27 @@ const GptSearchBar = () => {
       </h1>
 
       <form
-        className="flex flex-col md:flex-row items-center w-8/12 2xl:w-6/12  gap-4 lg:gap-2 2xl:gap-6"
-       >
+        className="flex flex-col md:flex-row items-center w-8/12 2xl:w-6/12  gap-4 lg:gap-2 2xl:gap-6" >
         <input
-          ref={searchText}
-          type="text"
-          className="flex-1 text-lg 2xl:text-3xl text-white bg-zinc-800 border border-zinc-700 p-4 2xl:p-8 rounded-md 2xl:rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 transition"
-          placeholder="Search by mood, genre, or movie name..."
-        />
+          ref={searchText}  type="text"
+         className="flex-1 text-lg 2xl:text-3xl text-white bg-zinc-800 border border-zinc-700 p-4 2xl:p-8 rounded-md 2xl:rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600 transition"
+          placeholder="Search by mood, genre, or movie name..." />
        <button
         onClick={(e) => {
           e.preventDefault(); 
           handleGptSearchClick();
         }}
         type="submit"
-          className="bg-button-red px-4 py-4 lg:px-6 lg:py-4 2xl:p-8 text-lg 2xl:text-3xl rounded-md 2xl:rounded-xl font-semibold hover:bg-red-700 transition hover:scale-105"
-        >   Search
+          className="bg-button-red px-4 py-4 lg:px-6 lg:py-4 2xl:p-8 text-lg 2xl:text-3xl rounded-md 2xl:rounded-xl font-semibold hover:bg-red-700 transition hover:scale-105" >   
+          Search
         </button>
       </form>
           <h1 
-      onClick={() => {
-        handleClearMovies();
+      onClick={() => { handleClearMovies();
       }}
       className="flex mt-2 mx-auto text-button-red text-md 2xl:text-2xl hover:cursor-pointer hover:underline">Clear Result</h1>
       {errorMessage && (
-        <p className="text-red-400 mt-4 text-center text-sm">{errorMessage}</p>
+    <p className="text-red-400 mt-4 text-center text-sm">{errorMessage}</p>
       )}
     </div>
   );

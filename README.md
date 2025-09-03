@@ -1,4 +1,4 @@
-# Netflix GPT 🎬🔍
+# Netflix GPT
 
 A responsive, AI-powered movie recommendation app built with **React**, **Redux**, **Tailwind CSS**, and **Firebase**. Netflix GPT mimics the Netflix UI and integrates **OpenAI** to provide smart movie recommendations via a search interface.
 
@@ -6,18 +6,18 @@ A responsive, AI-powered movie recommendation app built with **React**, **Redux*
 
 ---
 
-## 🔥 Features
+## Features
 
-- 🔐 **Authentication** using Firebase
-- 📺 **Netflix-like UI** with dynamic video backgrounds
-- 💬 **ChatGPT-powered search** for movie recommendations
-- 🎨 **Responsive design** for all screen sizes
-- 🧠 **Smart movie search** using OpenAI GPT
-- ⚙️ **State Management** with Redux Toolkit
+- **Authentication** using Firebase
+- **Netflix-like UI** with dynamic video backgrounds
+- **ChatGPT-powered search** for movie recommendations
+- **Responsive design** for all screen sizes
+- **Smart movie search** using OpenAI GPT
+- **State Management** with Redux Toolkit
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React**
 - **Redux Toolkit**
@@ -28,20 +28,20 @@ A responsive, AI-powered movie recommendation app built with **React**, **Redux*
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 > Screenshots of the app:
 
-### 📝 Signup Page
+### Signup Page
 ![Signup](image-3.png)
 
-### 🔐 Sign In Page
+### Sign In Page
 ![Sign In](image-4.png)
 
-### 🎬 Main Browser UI
+### Main Browser UI
 ![Main Browser](image.png)
 
-### 🤖 GPT Movie Search
+### GPT Movie Search
 ![GPT Search](image-1.png)
 
 
