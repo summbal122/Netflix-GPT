@@ -30,13 +30,14 @@ const Browse = () => {
 
   return (
     <div className="bg-[#141414]">
-      {showGptSearch ? <GptSearch /> : <> <MainBrowser/>
+      {showGptSearch ? <GptSearch /> : 
+      <> 
+      <MainBrowser/>
       <MoviesSection/>
       <TvShowsSection/>
-    </>  }
-   
-
-
+    </> 
+     }
+  
     </div>
   );
 }

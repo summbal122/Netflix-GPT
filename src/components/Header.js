@@ -70,8 +70,7 @@ const Header = () => {
                 onClick={() => {
                   if (showGptSearch) dispatch(toggleGptSearchView());
                   navigate("/browse");
-                }}
-              >
+                }} >
                 Home
               </li>
               {!showGptSearch && (
@@ -94,7 +93,7 @@ const Header = () => {
                         {genres.map((genre) => (
                           <h1 key={genre.id} className="hover:opacity-60">{genre.name}</h1>
                         ))}
-                      </div>
+                   </div>
                     )}
                   </div>
                 </>
@@ -104,8 +103,7 @@ const Header = () => {
             {location.pathname === "/browse" && !showGptSearch && (
               <button
                 onClick={handleGptSearchClick}
-                className="text-black bg-white py-2 px-6 2xl:px-18 2xl:py-3 text-md 2xl:text-2xl font-semibold rounded-sm 2xl:rounded-xl hover:opacity-80"
-              >
+                className="text-black bg-white py-2 px-6 2xl:px-18 2xl:py-3 text-md 2xl:text-2xl font-semibold rounded-sm 2xl:rounded-xl hover:opacity-80" >
                 GPT Search
               </button>
             )}
@@ -113,9 +111,7 @@ const Header = () => {
             <div className="flex items-center gap-4 2xl:gap-4 relative" ref={dropdownRef}>
               <img
                 className="w-10 2xl:w-20 rounded-md 2xl:rounded-xl cursor-pointer"
-                alt="profile"
-                src={NETFLIX_PROFILE}
-              />
+                alt="profile" src={NETFLIX_PROFILE} />
               <i
                 onClick={handleShowChevron}
                 className={`fa-solid ${showChevron ? "fa-chevron-up" : "fa-chevron-down"} text-white cursor-pointer text-2xl lg:text-sm 2xl:text-2xl`}
@@ -129,8 +125,7 @@ const Header = () => {
                     onClick={() => {
                       handleSignOut();
                       setShowChevron(false);
-                    }}
-                  >
+                    }}  >
                     Sign Out
                   </h2>
                 </div>

@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Body />, // ✅ use Body as parent layout
+    element: <Body />, 
     children: [
       {
         path: "/",

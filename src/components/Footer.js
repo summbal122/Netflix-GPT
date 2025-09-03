@@ -29,7 +29,7 @@ const Footer = () => {
       Service Code
     </button>
 
-    <p className="mt-4 text-[8px] md:text-xs text-gray-500">© 1997–2025 Netflix, Inc.</p>
+    <p className="mt-4 text-[8px] md:text-xs text-gray-500">© All rights reserved</p>
   </div>
 </footer>
 

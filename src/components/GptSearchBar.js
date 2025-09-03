@@ -50,7 +50,6 @@ const GptSearchBar = () => {
         })
       );
     } catch (err) {
-      console.error("GPT error:", err);
       setErrorMessage("Something went wrong. Try again.");
     }
   };

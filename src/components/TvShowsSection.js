@@ -13,7 +13,6 @@ const TvShowsSection = () => {
        <MovieList title={"On The Air"} movies = {tv.tvOnTheAir} />
        <MovieList title={"Popular Tv"} movies = {tv.popularTv} />
        <MovieList title={"Top Rated"} movies = {tv.topRatedTv} />
-      
     </div>
     </div>
   )

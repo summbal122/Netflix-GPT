@@ -15,7 +15,6 @@ const useMovieTrailer = (id) => {
 );
     const trailer = dataTrailers.length ? dataTrailers[1] : json.results[1] ;
     dispatch(addTrailer({ trailer, verticalTrailer }));
-    console.log(verticalTrailer);
   }
   useEffect(()=> {
     getMovieVideos();

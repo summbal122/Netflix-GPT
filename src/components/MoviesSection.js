@@ -6,7 +6,6 @@ const MoviesSection = () => {
   return (
     <div
      className="text-white flex flex-col  gap-4 lg:gap-8 bg-[#141414] px-3 md:px-6 ">
-      
       <div className="mt-[30px] md:mt-[-80px] lg:mt-[-100px]   relative z-20 text-white "> 
      <MovieList title={"Trending these days"} movies= {movies.trending} />
       </div>

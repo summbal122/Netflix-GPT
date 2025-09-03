@@ -77,12 +77,11 @@ import { useState } from "react"
              <div className='bg-[#2d2d2d] py-4 px-6 text-md md:text-2xl  space-y-8'>
             <p >Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
            </p>
-             <p> You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+             <p> You can watch as much as you want, whenever you want without a single commercial &#95; all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
             </div>
            )}
             </div> 
 
-                
         <div className='space-y-[2px] text-white'>
           <div className='bg-[#2d2d2d] py-4 px-6 flex items-center justify-between'>
             <p className='text-md md:text-2xl '>How much does Netflix cost?</p>

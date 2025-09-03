@@ -47,26 +47,17 @@ const Login = () => {
 
               <form
                 onSubmit={(e) => e.preventDefault()}
-                className="flex flex-col gap-3 lg:gap-2 2xl:gap-5 items-center w-full"
-              >
+                className="flex flex-col gap-3 lg:gap-2 2xl:gap-5 items-center w-full">
                 <input
-                  ref={email}
-                  type="text"
-                  placeholder="Email or mobile number"
-                  className="p-4 lg:p-3 2xl:p-6 text-white bg-transparent border border-gray-600 w-full outline-none rounded-sm text-xl lg:text-sm 2xl:text-xl"
-                />
+                  ref={email} type="text" placeholder="Email or mobile number"
+                  className="p-4 lg:p-3 2xl:p-6 text-white bg-transparent border border-gray-600 w-full outline-none rounded-sm text-xl lg:text-sm 2xl:text-xl" />
                 <input
-                  ref={password}
-                  type="password"
-                  placeholder="Password"
-                  className="p-4 lg:p-3 2xl:p-6 text-white bg-transparent border border-gray-600 w-full outline-none rounded-sm text-xl lg:text-sm 2xl:text-xl"
-                />
+                  ref={password} type="password" placeholder="Password"
+                  className="p-4 lg:p-3 2xl:p-6 text-white bg-transparent border border-gray-600 w-full outline-none rounded-sm text-xl lg:text-sm 2xl:text-xl"  />
 
                 <button
                   className="bg-button-red text-white w-full p-4 lg:p-3 2xl:p-6 cursor-pointer rounded-sm font-semibold text-xl md:text-md lg:text-sm 2xl:text-2xl hover:opacity-80"
-                  onClick={handleButtonClick}
-                >
-                  Sign In
+                  onClick={handleButtonClick}> Sign In
                 </button>
 
                 <h2 className="text-gray-400">OR</h2>
@@ -84,8 +75,7 @@ const Login = () => {
                     <input
                       type="checkbox"
                       id="customCheck"
-                      className="accent-white w-4 h-4 hover:cursor-pointer"
-                    />
+                      className="accent-white w-4 h-4 hover:cursor-pointer" />
                     <label htmlFor="customCheck" className="text-white text-lg lg:text-sm 2xl:text-xl ">
                       Remember me
                     </label>
@@ -95,8 +85,7 @@ const Login = () => {
                     New to Netflix?
                     <span
                       className="text-white font-semibold hover:underline"
-                      onClick={toggleSignInForm}
-                    >
+                      onClick={toggleSignInForm} >
                       <Link to="/signup"> Sign up now. </Link>
                     </span>
                   </p>
@@ -108,8 +97,7 @@ const Login = () => {
                     className="text-blue-500 underline text-xl md:text-xs 2xl:text-xl"
                     href="https://www.google.com"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer" >
                     Learn more
                   </a>
                 </div>

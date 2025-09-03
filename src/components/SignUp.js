@@ -42,8 +42,6 @@ const SignUp = () => {
     const errorCode = error.code;
     const errorMessage = error.message;
     setErrorMessage(errorCode, errorMessage);
-    
-    // ..
   });
 
   }
